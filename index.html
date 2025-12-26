@@ -4,60 +4,114 @@
 <meta charset="UTF-8">
 <title>Ocean Cartagena & Lounge</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body{margin:0;
-font-family: 'Arial', sans-serif;
-background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
-background-size: cover;
-background-position: center;
-min-height: 100vh;
-display:flex;
-justify-content:center;
-align-items:center;  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header{background:url('https://images.unsplash.com/featured/?beach,luxury') center/cover;height:100vh;display:flex;flex-direction:column;justify-content:center;}
-h1{font-size:42px;margin:0;}
-p{font-size:18px;}
-.btn{background: linear-gradient(45deg,#00ffcc,#00c851);
-color:#000;
-padding:18px 32px;
-border-radius:50px;
-font-size:20px;
-font-weight:bold;
-box-shadow:0 0 20px rgba(0,255,204,0.6);
-transition:0.3s;
-}
-.btn:hover{
-transform:scale(1.08);
-box-shadow:0 0 35px rgba(0,255,204,0.9);}
-</style>
 </head>
 <body>
 
-<header>
-<h1>Ocean & Cartagena Lounge</h1>
-<p>Luxury Beach Club Experience in Cartagena</p>
-<a href="https://wa.me/+573170449094?text=Hola%20quiero%20reservar%20en%20Ocean%20Cartagena" class="btn">RESERVE VIA WHATSAPP</a><div class="section">
-<h2>VIP Experiences</h2>
-<div class="card">Oceanfront Beds</div>
-<div class="card">Premium Bottles & Champagne</div>
-<div class="card">Private Lounge Areas</div>
+<!-- Contenedor principal -->
+<div class="container">
+  <h1>Ocean & Cartagena Lounge</h1>
+  <p>
+    Luxury Beach Club & VIP Experiences in Cartagena, Colombia.<br>
+    Premium bottles, oceanfront beds, private lounge areas, signature cocktails and unforgettable beach experiences for couples, groups and travelers.
+  </p>
+
+  <!-- Botón de Reserva superior -->
+  <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeDN1079rP-3EiQnsfx3RTmmKdkN4_BzROUPfljnog4I7TTWA/viewform?usp=header" target="_blank">Reservar Ahora</a>
 </div>
 
-<div class="section">
-<h2>Location</h2>
-<p>Cartagena de Indias, Islas del Rosario ,Colombia</p>
+<!-- Contenedor adicional para imágenes o más información -->
+<div class="extra-content">
+  <p>Explora nuestros paquetes VIP, camas frente al mar y experiencias exclusivas.</p>
+  <!-- Botón de Reserva inferior -->
+  <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeDN1079rP-3EiQnsfx3RTmmKdkN4_BzROUPfljnog4I7TTWA/viewform?usp=header" target="_blank">Reservar Ahora</a>
 </div>
+
+<!-- Estilo CSS -->
+<style>
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .container, .extra-content {
+    background: rgba(0,0,0,0.75);
+    padding: 30px 20px;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: #ddd;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    display: inline-block;
+    background: linear-gradient(45deg,#00ffcc,#00c851);
+    color: black;
+    padding: 18px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(0,255,204,0.6);
+    transition: 0.3s;
+    margin: 10px 0;
+  }
+
+  .btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 35px rgba(0,255,204,0.9);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 26px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .btn {
+      font-size: 18px;
+      padding: 16px 28px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 22px;
+    }
+    p {
+      font-size: 13px;
+    }
+    .btn {
+      font-size: 16px;
+      padding: 14px 24px;
+    }
+  }
+</style>
 
 </body>
 </html>
