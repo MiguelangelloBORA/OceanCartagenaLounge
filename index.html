@@ -53,17 +53,19 @@
   }
 
  h1 {
-  color: #fff;
-  font-size: 46px;
-  margin-bottom: 15px;
-  font-family: 'Brittany Signature', cursive;
-  letter-spacing: 2px;
-}
+ https://fonts.cdnfonts.com/css/brittany-signature}
   p {
     color: #ddd;
     font-size: 16px;
     margin-bottom: 30px;
-  }
+    @font-face {
+    font-family: 'Brittany Signature';
+    src: url('BrittanySignature.eot');
+    src: url('BrittanySignature.eot?#iefix') format('embedded-opentype'),
+         url('BrittanySignature.woff2') format('woff2'),
+         url('BrittanySignature.woff') format('woff'),
+         url('BrittanySignature.ttf')  format('truetype'),
+         url('BrittanySignature.svg#Brittany Signature') format('svg');  }
 
   .btn {
     display: inline-block;
