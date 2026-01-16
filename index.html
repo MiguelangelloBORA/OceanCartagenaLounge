@@ -1,163 +1,141 @@
 <!DOCTYPE html>
-<html lang="en"><div class="gallery-section">
-  <h2>Nuestras Experiencias</h2>
-  <div class="gallery-grid">
-
-    <div class="gallery-item">
-      <img src="foto1.jpg">
-    </div>
-
-    <div class="gallery-item">
-      <video src="video1.mp4" autoplay muted loop></video>
-    </div>
-
-  </div>
-</div><link href="https://fonts.cdnfonts.com/css/brittany-signature" rel="stylesheet">head>
-<meta charset="UTF-8">
-<title>Ocean Cartagena & Lounge</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartagena Premium Tours | Rosario Islands | Scuba Diving</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #0077be, #00b4d8); }
+        header { background: #023e8a; color: white; padding: 1rem; position: sticky; top: 0; z-index: 100; }
+        .lang-switch { float: right; margin-right: 2rem; }
+        .lang-switch button { background: #90e0ef; border: none; padding: 0.5rem 1rem; margin: 0 0.2rem; border-radius: 20px; cursor: pointer; }
+        .lang-active { background: #ff6b9d; color: white; }
+        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; }
+        nav li { margin: 0 1rem; }
+        nav a { color: white; text-decoration: none; font-weight: bold; }
+        .hero { background: url('https://via.placeholder.com/1200x500/023e8a/white?text=Book+Now+50%25+OFF') no-repeat center/cover; height: 500px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; }
+        .book-btn { background: #ff6b9d; color: white; padding: 1rem 2rem; border: none; border-radius: 30px; font-size: 1.2rem; margin-top: 1rem; cursor: pointer; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .tours { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+        .tour { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); text-align: center; position: relative; overflow: hidden; }
+        .tour::before { content: '🔥 LIMITED SPOTS'; position: absolute; top: 10px; right: -30px; background: #ff4757; color: white; padding: 0.5rem 4rem; transform: rotate(45deg); font-weight: bold; }
+        .tour img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem; }
+        .price { background: linear-gradient(45deg, #ff6b9d, #ff8e8e); color: white; padding: 1rem; border-radius: 25px; font-size: 1.5rem; font-weight: bold; margin: 1rem 0; }
+        .cta-btn { background: #00b4d8; color: white; border: none; padding: 0.8rem 2rem; border-radius: 25px; font-weight: bold; cursor: pointer; width: 100%; margin-top: 1rem; }
+        footer { background: #023e8a; color: white; text-align: center; padding: 2rem; }
+        .hidden { display: none; }
+        @media (max-width: 768px) { nav ul { flex-direction: column; } .lang-switch { float: none; text-align: center; margin-bottom: 1rem; } }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="lang-switch">
+            <button onclick="setLang('es')" class="lang-active">🇨🇴 ES</button>
+            <button onclick="setLang('en')">🇺🇸 EN</button>
+            <button onclick="setLang('pt')">🇧🇷 PT</button>
+        </div>
+        <h1 id="title">🌴 Cartagena Premium Tours</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Home</a></li>
+                <li><a href="#tours">Tours</a></li>
+                <li><a href="#islas">Rosario</a></li>
+                <li><a href="#contacto">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- Contenedor principal -->
-<div class="container">
-  <h1>Ocean & Cartagena Lounge</h1>
-  <p>
-    Luxury Beach Club & VIP Experiences in Cartagena, Colombia.<br>
-    Premium bottles, oceanfront beds, private lounge areas, signature cocktails and unforgettable beach experiences for couples, groups and travelers.
-  </p>
+    <!-- ESPAÑOL -->
+    <div id="es-content">
+        <section id="inicio" class="hero">
+            <h2>¡RESERVA HOY 50% OFF! 🏝️</h2>
+            <p>Islas del Rosario, Oceanario, Snorkel & Buceo PADI. Tours desde $150.000 COP</p>
+            <button class="book-btn" onclick="whatsappContact('es')">¡WhatsApp Ahora!</button>
+        </section>
+        <div class="container">
+            <section id="tours">
+                <h2>🏖️ Tours Más Vendidos</h2>
+                <div class="tours">
+                    <div class="tour">
+                        <img src="https://via.placeholder.com/350x250/0077be/white?text=Islas+Rosario" alt="Rosario">
+                        <h3>Islas del Rosario + Beach Club VIP</h3>
+                        <p>🚤 Barco rápido | 🏖️ Playa privada | 🍹 Open bar | 🥗 Almuerzo gourmet</p>
+                        <div class="price">¡$125.000! <s>$250.000</s></div>
+                        <button class="cta-btn" onclick="whatsappContact('rosario')">RESERVAR YA</button>
+                    </div>
+                    <div class="tour">
+                        <img src="https://via.placeholder.com/350x250/00b4d8/white?text=Oceanario" alt="Oceanario">
+                        <h3>Oceanario + Snorkel Pro</h3>
+                        <p>🐠 Acuario marino | 🐢 Tortugas | 🦈 Tiburones | Equipo incluido</p>
+                        <div class="price">¡$90.000! <s>$180.000</s></div>
+                        <button class="cta-btn" onclick="whatsappContact('oceanario')">RESERVAR YA</button>
+                    </div>
+                    <div class="tour">
+                        <img src="https://via.placeholder.com/350x250/03045e/white?text=Buceo+PADI" alt="Scuba">
+                        <h3>Buceo Certificado PADI</h3>
+                        <p>🏄‍♂️ Dive Master | 🎥 Fotos incluidas | 2 inmersiones | Certificado</p>
+                        <div class="price">¡$175.000! <s>$350.000</s></div>
+                        <button class="cta-btn" onclick="whatsappContact('buceo')">RESERVAR YA</button>
+                    </div>
+                </div>
+            </section>
+            <section id="contacto">
+                <h2>📱 Reserva 24/7 WhatsApp</h2>
+                <p><strong>+57 300 123 4567</strong> | Cartagena de Indias | Tours diarios 8AM</p>
+            </section>
+        </div>
+    </div>
 
-  <!-- Botón de Reserva superior -->
-  <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeDN1079rP-3EiQnsfx3RTmmKdkN4_BzROUPfljnog4I7TTWA/viewform?usp=header" target="_blank">Reservar Ahora</a>
-</div>
+    <!-- ENGLISH -->
+    <div id="en-content" class="hidden">
+        <section id="inicio" class="hero">
+            <h2>50% OFF TODAY ONLY! 🏝️</h2>
+            <p>Rosario Islands, Aquarium, Snorkel & PADI Scuba. Tours from $150.000 COP</p>
+            <button class="book-btn" onclick="whatsappContact('en')">WhatsApp Now!</button>
+        </section>
+        <!-- Tours content similar, translated -->
+    </div>
 
-<!-- Contenedor adicional para imágenes o más información -->
-<div class="extra-content">
-  <p>Explora nuestros paquetes VIP, camas frente al mar y experiencias exclusivas.</p>
-  <!-- Botón de Reserva inferior -->
-  
-<!-- Estilo CSS -->
-<style>
-  body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-  }
+    <!-- PORTUGUÊS -->
+    <div id="pt-content" class="hidden">
+        <section id="inicio" class="hero">
+            <h2>50% DESCONTO HOJE! 🏝️</h2>
+            <p>Ilhas Rosario, Aquário, Snorkel & Mergulho PADI. Tours desde $150.000 COP</p>
+            <button class="book-btn" onclick="whatsappContact('pt')">WhatsApp Agora!</button>
+        </section>
+    </div>
 
-  .container, .extra-content {
-    background: rgba(0,0,0,0.75);
-    padding: 30px 20px;
-    border-radius: 20px;
-    max-width: 600px;
-    width: 100%;
-    margin: 20px auto;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-  }
+    <footer>
+        <p>&copy; 2026 Cartagena Premium Tours. Rosario Islands Experts. <span id="footer-lang">Todos derechos reservados.</span></p>
+    </footer>
 
- h1 {
- https://fonts.cdnfonts.com/css/brittany-signature}
-  p {
-    color: #ddd;
-    font-size: 16px;
-    margin-bottom: 30px;
-    @font-face {
-    font-family: 'Brittany Signature';
-    src: url('BrittanySignature.eot');
-    src: url('BrittanySignature.eot?#iefix') format('embedded-opentype'),
-         url('BrittanySignature.woff2') format('woff2'),
-         url('BrittanySignature.woff') format('woff'),
-         url('BrittanySignature.ttf')  format('truetype'),
-         url('BrittanySignature.svg#Brittany Signature') format('svg');  }
+    <script>
+        function setLang(lang) {
+            // Hide all content
+            document.querySelectorAll('[id$="-content"]').forEach(el => el.classList.add('hidden'));
+            // Show selected
+            document.getElementById(lang + '-content').classList.remove('hidden');
+            // Update buttons
+            document.querySelectorAll('.lang-switch button').forEach(btn => btn.classList.remove('lang-active'));
+            event.target.classList.add('lang-active');
+        }
 
-  .btn {
-    display: inline-block;
-    background: linear-gradient(45deg,#00ffcc,#00c851);
-    color: black;
-    padding: 18px 32px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    box-shadow: 0 0 20px rgba(0,255,204,0.6);
-    transition: 0.3s;
-    margin: 10px 0;
-  }
+        function whatsappContact(tour) {
+            let message = '';
+            if (tour === 'es') message = '¡Hola! Quiero reservar tour Rosario 50% OFF';
+            else if (tour === 'rosario') message = '¡Reserva Islas del Rosario!';
+            // Open WhatsApp
+            window.open('https://wa.me/573001234567?text=' + encodeURIComponent(message), '_blank');
+        }
 
-  .btn:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 35px rgba(0,255,204,0.9);
-  }
-
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 26px;
-    }
-    p {
-      font-size: 14px;
-    }
-    .btn {
-      font-size: 18px;
-      padding: 16px 28px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 22px;
-    }
-    p {
-      font-size: 13px;
-    }
-    .btn {
-      font-size: 16px;
-      padding: 14px 24px;
-    }
-  }
-    /* ===== GALERIA ===== */
-.gallery-section {
-  margin-top: 60px;
-  background: rgba(0,0,0,0.7);
-  padding: 40px 20px;
-  border-radius: 25px;
-}
-
-.gallery-section h2 {
-  text-align: center;
-  color: #fff;
-  margin-bottom: 30px;
-  font-size: 32px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 20px;
-}
-
-.gallery-item img,
-.gallery-item video {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 18px;
-  transition: .4s;
-}
-
-.gallery-item:hover img,
-.gallery-item:hover video {
-  transform: scale(1.05);
-}</style>
-
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
