@@ -3,130 +3,304 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartagena Premium Tours | Rosario Islands | Scuba Diving</title>
+    <title>🌴 Islas del Rosario Premium Tours | Cartagena | 50% OFF Esta Semana</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #0077be, #00b4d8); }
-        header { background: #023e8a; color: white; padding: 1rem; position: sticky; top: 0; z-index: 100; }
-        .lang-switch { float: right; margin-right: 2rem; }
-        .lang-switch button { background: #90e0ef; border: none; padding: 0.5rem 1rem; margin: 0 0.2rem; border-radius: 20px; cursor: pointer; }
-        .lang-active { background: #ff6b9d; color: white; }
-        nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; }
-        nav li { margin: 0 1rem; }
-        nav a { color: white; text-decoration: none; font-weight: bold; }
-        .hero { background: url('https://via.placeholder.com/1200x500/023e8a/white?text=Book+Now+50%25+OFF') no-repeat center/cover; height: 500px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; }
-        .book-btn { background: #ff6b9d; color: white; padding: 1rem 2rem; border: none; border-radius: 30px; font-size: 1.2rem; margin-top: 1rem; cursor: pointer; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        .tours { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
-        .tour { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); text-align: center; position: relative; overflow: hidden; }
-        .tour::before { content: '🔥 LIMITED SPOTS'; position: absolute; top: 10px; right: -30px; background: #ff4757; color: white; padding: 0.5rem 4rem; transform: rotate(45deg); font-weight: bold; }
-        .tour img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem; }
-        .price { background: linear-gradient(45deg, #ff6b9d, #ff8e8e); color: white; padding: 1rem; border-radius: 25px; font-size: 1.5rem; font-weight: bold; margin: 1rem 0; }
-        .cta-btn { background: #00b4d8; color: white; border: none; padding: 0.8rem 2rem; border-radius: 25px; font-weight: bold; cursor: pointer; width: 100%; margin-top: 1rem; }
-        footer { background: #023e8a; color: white; text-align: center; padding: 2rem; }
+        body { 
+            font-family: 'Georgia', serif; 
+            line-height: 1.7; 
+            color: #2c3e50; 
+            background: 
+                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80') center/cover fixed;
+            min-height: 100vh;
+            position: relative;
+        }
+        body::before {
+            content: ''; 
+            position: fixed; 
+            top: 0; left: 0; 
+            width: 100%; height: 100%; 
+            background: rgba(255,255,255,0.85); 
+            z-index: -1;
+        }
+        /* 🚀 Banner Urgencia 50% OFF */
+        .urgency-banner {
+            background: linear-gradient(45deg, #ff4757, #ff6b9d);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+            animation: pulse 2s infinite;
+            position: sticky; top: 0; z-index: 101;
+        }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.8; } }
+        header { 
+            background: linear-gradient(135deg, #1e3c72, #2a5298); 
+            color: white; 
+            padding: 1.5rem; 
+            position: sticky; 
+            top: 70px; z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-size: 1.8rem; font-weight: bold; }
+        .lang-switch { margin: 0; }
+        .lang-switch button { 
+            background: rgba(255,255,255,0.2); 
+            border: 2px solid white; 
+            color: white; 
+            padding: 0.6rem 1.2rem; 
+            margin: 0 0.3rem; 
+            border-radius: 25px; 
+            cursor: pointer; 
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        .lang-switch button:hover, .lang-active { background: white; color: #1e3c72; }
+        .hero-title { text-align: center; padding: 3rem 2rem; background: rgba(255,255,255,0.95); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
+        .tours-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 2.5rem; margin: 3rem 0; }
+        .tour-card { 
+            background: rgba(255,255,255,0.95); 
+            border-radius: 20px; 
+            overflow: hidden; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1); 
+            transition: all 0.4s ease; 
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+        .limited-spots {
+            position: absolute; top: 15px; right: 15px;
+            background: #ff4757; color: white; padding: 0.4rem 1rem;
+            border-radius: 20px; font-size: 0.8rem; font-weight: bold;
+        }
+        .tour-card:hover { transform: translateY(-15px); box-shadow: 0 25px 60px rgba(0,0,0,0.2); }
+        .tour-img { width: 100%; height: 260px; object-fit: cover; }
+        .tour-content { padding: 2rem; }
+        /* ✅ CAMBIADO: Sin precios - Solo WhatsApp */
+        .whatsapp-priority {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white; padding: 1.2rem; border-radius: 15px;
+            font-size: 1.3rem; font-weight: bold; margin: 1.5rem 0;
+            text-align: center; border: 2px solid #d63031;
+        }
+        .tour-title { color: #1e3c72; font-size: 1.6rem; margin-bottom: 1rem; }
+        .tour-desc { color: #555; margin-bottom: 1rem; }
+        .testimonial {
+            background: rgba(52,152,219,0.1); padding: 1rem;
+            border-radius: 10px; font-style: italic; margin-top: 1rem;
+            border-left: 4px solid #3498db;
+        }
+        .whatsapp-btn { 
+            background: linear-gradient(45deg, #25D366, #128C7E); 
+            color: white; 
+            border: none; 
+            padding: 1.2rem 2rem; 
+            border-radius: 30px; 
+            font-size: 1.1rem; 
+            font-weight: bold; 
+            width: 100%; 
+            cursor: pointer; 
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(37,211,102,0.3);
+        }
+        .whatsapp-btn:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(37,211,102,0.4); }
+        .office-hours { 
+            background: linear-gradient(135deg, rgba(255,193,7,0.2), rgba(241,196,15,0.2)); 
+            padding: 2rem; 
+            border-radius: 20px; 
+            text-align: center; 
+            margin: 4rem 0; 
+            border: 2px dashed #f39c12;
+        }
+        .map-container { height: 300px; margin: 2rem 0; border-radius: 15px; overflow: hidden; }
+        .social-links { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
+        .social-links a { color: #25D366; font-size: 1.5rem; text-decoration: none; }
+        footer { 
+            background: rgba(30,60,114,0.98); 
+            color: white; 
+            text-align: center; 
+            padding: 3rem 2rem; 
+            margin-top: 4rem;
+        }
         .hidden { display: none; }
-        @media (max-width: 768px) { nav ul { flex-direction: column; } .lang-switch { float: none; text-align: center; margin-bottom: 1rem; } }
+        @media (max-width: 768px) { 
+            .tours-grid { grid-template-columns: 1fr; } 
+            header { flex-direction: column; gap: 1rem; }
+        }
     </style>
 </head>
 <body>
+    <!-- 🚀 Banner 50% OFF Urgente -->
+    <div class="urgency-banner">
+        🔥 <strong>¡50% OFF ESTA SEMANA SOLO POR WHATSAPP!</strong> | 15 cupos | Escribe YA 👇
+    </div>
+
     <header>
+        <div class="logo">🏝️ RosarioTours.co</div>
         <div class="lang-switch">
             <button onclick="setLang('es')" class="lang-active">🇨🇴 ES</button>
             <button onclick="setLang('en')">🇺🇸 EN</button>
             <button onclick="setLang('pt')">🇧🇷 PT</button>
         </div>
-        <h1 id="title">🌴 Cartagena Premium Tours</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Home</a></li>
-                <li><a href="#tours">Tours</a></li>
-                <li><a href="#islas">Rosario</a></li>
-                <li><a href="#contacto">Book Now</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- ESPAÑOL -->
+    <!-- ESPAÑOL - COMPLETO -->
     <div id="es-content">
-        <section id="inicio" class="hero">
-            <h2>¡RESERVA HOY  🏝️</h2>
-            <p>Islas del Rosario, Oceanario, Snorkel & Buceo PADI. Tours desde </p>
-            <button class="book-btn" onclick="whatsappContact('es')">¡WhatsApp Ahora!</button>
-        </section>
+        <div class="hero-title">
+            <h2>🏖️ Experiencias Únicas en Islas del Rosario</h2>
+            <p><strong>✅ Cancelación gratis 24h | 🚤 Salida diaria 8AM | ⭐️ 4.9★ 500+ reseñas</strong></p>
+            <!-- ✅ CAMBIADO: CTA directo WhatsApp -->
+            <div style="margin-top: 2rem;">
+                <a href="https://wa.me/573170449094?text=Hola!%20Quiero%20info%20tours%20Islas%20Rosario" class="whatsapp-btn" style="display:inline-block; max-width:300px;"> 
+                    💬 Cotizar Tours Ahora
+                </a>
+            </div>
+        </div>
         <div class="container">
-            <section id="tours">
-                <h2>🏖️ Tours Más Vendidos</h2>
-                <div class="tours">
-                    <div class="tour">
-                        <img src="https://via.placeholder.com/350x250/0077be/white?text=Islas+Rosario" alt="Rosario">
-                        <h3>Islas del Rosario + Beach Club VIP</h3>
-                        <p>🚤 Barco rápido | 🏖️ Playa privada | 🍹 Open bar | 🥗 Almuerzo gourmet</p>
-                        <div class="price">¡$125.000! <s>$250.000</s></div>
-                        <button class="cta-btn" onclick="whatsappContact('rosario')">RESERVAR YA</button>
-                    </div>
-                    <div class="tour">
-                        <img src="https://via.placeholder.com/350x250/00b4d8/white?text=Oceanario" alt="Oceanario">
-                        <h3>Oceanario + Snorkel Pro</h3>
-                        <p>🐠 Acuario marino | 🐢 Tortugas | 🦈 Tiburones | Equipo incluido</p>
-                        <div class="price">¡$90.000! <s>$180.000</s></div>
-                        <button class="cta-btn" onclick="whatsappContact('oceanario')">RESERVAR YA</button>
-                    </div>
-                    <div class="tour">
-                        <img src="https://via.placeholder.com/350x250/03045e/white?text=Buceo+PADI" alt="Scuba">
-                        <h3>Buceo Certificado PADI</h3>
-                        <p>🏄‍♂️ Dive Master | 🎥 Fotos incluidas | 2 inmersiones | Certificado</p>
-                        <div class="price">¡$175.000! <s>$350.000</s></div>
-                        <button class="cta-btn" onclick="whatsappContact('buceo')">RESERVAR YA</button>
+            <div class="tours-grid" id="tours-es">
+                <div class="tour-card">
+                    <div class="limited-spots">🔥 5 CUPOS</div>
+                    <img src="https://images.unsplash.com/photo-1578632352465-73e60f4979e5?w=400" alt="Buceo" class="tour-img">
+                    <div class="tour-content">
+                        <h3>🏄‍♂️ Buceo PADI Certificado</h3>
+                        <!-- ✅ QUITADOS PRECIOS - Solo WhatsApp -->
+                        <div class="whatsapp-priority">
+                            📲 <strong>¡PREGUNTA PRECIO POR WHATSAPP!</strong>
+                        </div>
+                        <p class="tour-desc">2 inmersiones con Dive Masters PADI. Equipo completo + certificado internacional. <strong>¡Solo 8 personas por grupo!</strong></p>
+                        <div class="testimonial">"¡La mejor experiencia! Certificado PADI en 1 día" - María G. ★★★★★</div>
+                        <button class="whatsapp-btn" onclick="whatsappReserve('buceo', 'es')">💬 Cotizar Buceo PADI</button>
                     </div>
                 </div>
-            </section>
-            <section id="contacto">
-                <h2>📱 Reserva 24/7 WhatsApp</h2>
-                <p><strong>+57 3170449094 </strong> | Cartagena de Indias | Tours diarios 8AM</p>
-            </section>
+
+                <div class="tour-card">
+                    <div class="limited-spots">⚡ POPULAR</div>
+                    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=400" alt="Snorkel" class="tour-img">
+                    <div class="tour-content">
+                        <h3>🐠 Tour Snorkel Premium</h3>
+                        <div class="whatsapp-priority">
+                            📲 <strong>¡PREGUNTA PRECIO POR WHATSAPP!</strong>
+                        </div>
+                        <p class="tour-desc">Explora arrecifes de coral con guías biólogos. Máscaras, aletas, tortugas y peces garantizados.</p>
+                        <div class="testimonial">"¡Espectacular! Vi 3 tortugas" - Carlos R. ★★★★★</div>
+                        <button class="whatsapp-btn" onclick="whatsappReserve('snorkel', 'es')">💬 Cotizar Snorkel</button>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="limited-spots">🌿 ÚNICO</div>
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Caminata" class="tour-img">
+                    <div class="tour-content">
+                        <h3>🌿 Caminata Ecológica</h3>
+                        <div class="whatsapp-priority">
+                            📲 <strong>¡PREGUNTA PRECIO POR WHATSAPP!</strong>
+                        </div>
+                        <p class="tour-desc">Selva Isla Grande con biólogos. Monos, aves exóticas, snacks orgánicos incluidos.</p>
+                        <div class="testimonial">"¡Naturaleza pura!" - Ana M. ★★★★★</div>
+                        <button class="whatsapp-btn" onclick="whatsappReserve('caminata', 'es')">💬 Cotizar Caminata</button>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="limited-spots">🌱 ESPECIAL</div>
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400" alt="Plantón" class="tour-img">
+                    <div class="tour-content">
+                        <h3>🌱 Tour Plantón Marino</h3>
+                        <div class="whatsapp-priority">
+                            📲 <strong>¡PREGUNTA PRECIO POR WHATSAPP!</strong>
+                        </div>
+                        <p class="tour-desc">Siembra corales + certificación ambiental. ¡Salva el océano con nosotros!</p>
+                        <button class="whatsapp-btn" onclick="whatsappReserve('planton', 'es')">💬 Cotizar Plantón</button>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="limited-spots">🚤 PRIVADO</div>
+                    <img src="https://images.unsplash.com/photo-1564507592333-cde0d82737f8?w=400" alt="Lancha" class="tour-img">
+                    <div class="tour-content">
+                        <h3>🚤 Lancha Privada</h3>
+                        <div class="whatsapp-priority">
+                            📲 <strong>¡COTIZACIÓN PERSONALIZADA WHATSAPP!</strong>
+                        </div>
+                        <p class="tour-desc">Yate hasta 12 personas. Ruta a tu medida, capitán experto, música incluida.</p>
+                        <button class="whatsapp-btn" onclick="whatsappReserve('lancha', 'es')">💬 Cotizar Lancha</button>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="limited-spots">🏡 Lujo</div>
+                    <img src="https://images.unsplash.com/photo-1572497921849-47a319cb8cee?w=400" alt="Airbnb" class="tour-img">
+                    <div class="tour-content">
+                        <h3>🏡 Airbnb Isla Privada</h3>
+                        <div class="whatsapp-priority">
+                            📲 <strong>¡PREGUNTA PRECIO POR WHATSAPP!</strong>
+                        </div>
+                        <p class="tour-desc">Cabañas frente mar + kayak gratis + bioluminiscencia nocturna.</p>
+                        <button class="whatsapp-btn" onclick="whatsappReserve('airbnb', 'es')">💬 Ver Disponibilidad</button>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="limited-spots">🏖️ FAVORITO</div>
+                    <img src="https://images.unsplash.com/photo-1564501049416-62d5f3343212?w=400" alt="Playa Blanca" class="tour-img">
+                    <div class="tour-content">
+                        <h3>🏖️ Playa Blanca VIP</h3>
+                        <div class="whatsapp-priority">
+                            📲 <strong>¡PREGUNTA PRECIO POR WHATSAPP!</strong>
+                        </div>
+                        <p class="tour-desc">Cama balinesa, menú gourmet, masajes. Acceso exclusivo más famoso playa.</p>
+                        <button class="whatsapp-btn" onclick="whatsappReserve('playablanca', 'es')">💬 Reservar Playa Blanca</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="office-hours">
+                <h3>📞 Atención Personalizada</h3>
+                <p><strong>Lun-Vie 9AM-6PM | Sáb-Dom 8AM-5PM</strong><br>
+                Respuesta WhatsApp <strong>24/7</strong> | 
+                <a href="https://wa.me/573170449094" style="color:#25D366;font-weight:bold;font-size:1.3rem;">+57 317 044 9094</a></p>
+                <iframe class="map-container" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.58!2d-75.56!3d10.39!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e692f!2sIslas%20del%20Rosario!5e0!3m2!1ses!2sco!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+                <div class="social-links">
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">📱 Instagram</a>
+                    <a href="#">🎥 TikTok</a>
+                    <a href="#">📧 Email</a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- ENGLISH -->
-    <div id="en-content" class="hidden">
-        <section id="inicio" class="hero">
-            <h2>50% OFF TODAY ONLY! 🏝️</h2>
-            <p>Rosario Islands, Aquarium, Snorkel & PADI Scuba. Tours from $150.000 COP</p>
-            <button class="book-btn" onclick="whatsappContact('en')">WhatsApp Now!</button>
-        </section>
-        <!-- Tours content similar, translated -->
-    </div>
-
-    <!-- PORTUGUÊS -->
-    <div id="pt-content" class="hidden">
-        <section id="inicio" class="hero">
-            <h2>50% DESCONTO HOJE! 🏝️</h2>
-            <p>Ilhas Rosario, Aquário, Snorkel & Mergulho PADI. Tours desde $150.000 COP</p>
-            <button class="book-btn" onclick="whatsappContact('pt')">WhatsApp Agora!</button>
-        </section>
-    </div>
-
     <footer>
-        <p>&copy; 2026 Cartagena Premium Tours. Rosario Islands Experts. <span id="footer-lang">Todos derechos reservados.</span></p>
+        <p>© 2026 <strong>RosarioTours.co</strong> | Tours Islas del Rosario Cartagena | 
+        <strong>Tours Buceo PADI | Snorkel | Playa Blanca</strong> | 
+        <a href="https://wa.me/573170449094" style="color:#25D366;">WhatsApp 317 044 9094</a></p>
     </footer>
 
     <script>
         function setLang(lang) {
-            // Hide all content
             document.querySelectorAll('[id$="-content"]').forEach(el => el.classList.add('hidden'));
-            // Show selected
             document.getElementById(lang + '-content').classList.remove('hidden');
-            // Update buttons
             document.querySelectorAll('.lang-switch button').forEach(btn => btn.classList.remove('lang-active'));
             event.target.classList.add('lang-active');
         }
 
-        function whatsappContact(tour) {
-            let message = '';
-            if (tour === 'es') message = '¡Hola! Quiero reservar tour Rosario 50% OFF';
-            else if (tour === 'rosario') message = '¡Reserva Islas del Rosario!';
-            // Open WhatsApp
-            window.open('https://wa.me/573001234567?text=' + encodeURIComponent(message), '_blank');
+        function whatsappReserve(tour, lang) {
+            const messages = {
+                buceo: '¡Hola! Me interesa Buceo PADI certificado. ¿Precio y fechas disponibles?',
+                snorkel: 'Hola! Quiero cotizar Tour Snorkel Premium. ¿Para cuántas personas?',
+                caminata: '¡Hola! Información Caminata Ecológica Isla Rosario. Precio por persona?',
+                planton: 'Cotización Tour Plantón Marino. ¿Qué incluye?',
+                lancha: '¡Hola! Quiero cotizar lancha privada para [número] personas.',
+                airbnb: 'Hola! Disponibilidad Airbnb isla privada. ¿Fechas y precio?',
+                playablanca: '¡Hola! Reserva Playa Blanca VIP. ¿Camas balinesas disponibles?'
+            };
+            const msg = messages[tour] || 'Hola! Información completa tours Islas del Rosario';
+            window.open(`https://wa.me/573170449094?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
         // Smooth scroll
